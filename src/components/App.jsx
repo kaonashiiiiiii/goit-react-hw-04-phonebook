@@ -23,7 +23,6 @@ export const App = () => {
     setContacts((prevContacts) => {
       return prevContacts.filter(item => item.id !== id)
     })
-    localStorage.setItem('contacts', JSON.stringify(contacts))
   }
 
   function checkContact (contact) {
@@ -41,7 +40,6 @@ export const App = () => {
       return [...prevContacts, contact]
     })
 
-    localStorage.setItem('contacts', JSON.stringify(contacts))
   }
 
   const filteredContacts = useMemo(function () {
